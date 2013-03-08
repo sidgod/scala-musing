@@ -41,11 +41,20 @@ object CompreTrial {
        if(upperDay.startsWith("S"))
      } println(upperDay)
      
-     println("Weekday / Weekend")
+     println("Weekday / Weekend v1")
      for (day <- days) {
        day match {
-         case "S*" => println("Weekend :)")
-         case _ => println("Weekday :(")
+         case curDay if curDay.startsWith("S") => println(curDay + " => Weekend :)")
+         case _ => println(day + " => Weekday :(")
+       }
+     }
+     
+     println("Weekday / Weekend v2")
+     for (day <- days) {
+       day match {
+         case (curDay @ "Saturday" ) if curDay.startsWith("S") => println(curDay + " => Weekend :)")
+         case (curDay @ "Sunday" ) if curDay.startsWith("S") => println(curDay + " => Weekend :)")
+         case _ => println(day + " => Weekday :(")
        }
      }
      
