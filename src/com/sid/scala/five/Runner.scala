@@ -8,8 +8,17 @@ object Runner {
       trial print
     } catch {
       case e: IllegalArgumentException =>
-        Console.print("Failed to run!", e);
+        Console.println("Failed to run!", e);
     }
+    
+    try {
+      val anotherTrial = new OOPTrialFullName("Siddharth", null)
+      anotherTrial printfullname
+    } catch {
+      case e: Exception =>
+      	Console.println("Another Failed to run!", e);
+    }
+    
   }
 
 }
