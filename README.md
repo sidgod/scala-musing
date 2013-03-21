@@ -34,4 +34,12 @@ match - case statement can be written in class as well. (anywhere actually)
 Matching can be on basis of data type, pattern, pattern in object attributes, lists (element in lists, head :: tail)
 Can also be in tuples. Used in try - catch - finally for matching exception as expression.
 
+Uniform access principal. _= as setter of some private variable.
+
+Companion classes - apply, unapply. apply - factories. unapply - extraction of data from object.
+unapply content will be used in match greatly.
+
+== internally calls equals. Works on everything except arrays where we have to use sameElements.
+
+Avoid inheriting case class from other case class.
 
