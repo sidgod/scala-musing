@@ -43,3 +43,5 @@ unapply content will be used in match greatly.
 
 Avoid inheriting case class from other case class.
 
+Can assign def to a val while declaring it
+e.g. val multiplier = (i: Int) => i * factor
