@@ -17,6 +17,14 @@ object FuncRunnerTwo {
     val outVal = stateCapitals map { entry => entry._2.endsWith("u") }
     val out = (outKey, outVal)
     println(out)
+    
+    def startsWithA(entry: (String, String)) : Boolean = { entry._1 startsWith "A"}
+    
+    // TODO try out all filtering defs in Iterable
+    val filteredMap = stateCapitals filter(startsWithA)
+    println("Filtered map: " + filteredMap)
+    
+    // TODO try out all fold / reduce operations
   }
 
 }

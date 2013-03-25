@@ -45,3 +45,42 @@ Avoid inheriting case class from other case class.
 
 Can assign def to a val while declaring it
 e.g. val multiplier = (i: Int) => i * factor
+
+User ++ to append elements to exiting map e.g. val lengths = Map[String,String]() ++ map2
+
+Functional programming => Functional literals and closures, recursion tail calls & tail calls optimization,
+Lists, Maps & Sets - Traversing, Mapping, Filtering, Folding & Reducing, Options & Pattern matching
+Partial functions, Currying, Implicits - Implicit conversion, Implicit function params
+Call by name:
+e.g. 
+def whileAwesome(conditional: => Boolean)(f: => Unit) {
+  if (conditional) {
+    f
+    whileAwesome(conditional)(f)
+  }
+}
+
+var count = 0
+
+whileAwesome(count < 5) {
+  println("still awesome")
+  count += 1
+}
+Lazy vals:
+e.g. 
+trait AbstractT2 {
+  println("In AbstractT2:")
+  val value: Int
+  lazy val inverse = { println("initializing inverse:"); 1.0/value }
+  //println("AbstractT2: value = "+value+", inverse = "+inverse)
+}
+
+val c2d = new AbstractT2 {
+  println("In c2d:")
+  val value = 10
+}
+
+println("Using c2d:")
+println("c2d.value = "+c2d.value+", inverse = "+c2d.inverse)
+
+If a val is lazy, make sure all uses of the val are also lazy!
