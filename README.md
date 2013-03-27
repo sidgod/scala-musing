@@ -84,3 +84,7 @@ println("Using c2d:")
 println("c2d.value = "+c2d.value+", inverse = "+c2d.inverse)
 
 If a val is lazy, make sure all uses of the val are also lazy!
+
+With actors we usually use case class or case object.
+
+Use react normally, use receive only when we want to return some output from actor. 
