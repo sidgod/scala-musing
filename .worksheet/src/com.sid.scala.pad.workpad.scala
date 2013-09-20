@@ -15,5 +15,11 @@ object workpad {;import org.scalaide.worksheet.runtime.library.WorksheetSupport.
 	or(true, true);System.out.println("""res7: Boolean = """ + $show(res$7));$skip(17); val res$8 = 
 	or(true, false);System.out.println("""res8: Boolean = """ + $show(res$8));$skip(17); val res$9 = 
 	or(false, true);System.out.println("""res9: Boolean = """ + $show(res$9));$skip(18); val res$10 = 
-	or(false, false);System.out.println("""res10: Boolean = """ + $show(res$10))}
+	or(false, false);System.out.println("""res10: Boolean = """ + $show(res$10));$skip(11); 
+	val x = 0;System.out.println("""x  : Int = """ + $show(x ));$skip(23); 
+	def f(y: Int) = y + 1;System.out.println("""f: (y: Int)Int""");$skip(46); 
+	val result = {
+		val x = f(3)
+		x * x
+	} + x;System.out.println("""result  : Int = """ + $show(result ))}
 }
