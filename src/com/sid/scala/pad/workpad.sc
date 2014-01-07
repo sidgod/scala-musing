@@ -24,4 +24,10 @@ object workpad {
 		val x = f(3)
 		x * x
 	} + x                                     //> result  : Int = 16
+	"abcde".isEmpty                           //> res11: Boolean = false
+	"abcde".head                              //> res12: Char = a
+	"abcde".tail                              //> res13: String = bcde
+	def sum(f: Int => Int)(a: Int, b: Int): Int = if (a > b) 0 else f(a) + sum(f)(a + 1, b)
+                                                  //> sum: (f: Int => Int)(a: Int, b: Int)Int
+	sum(x => x * x)(1, 3)                     //> res14: Int = 14
 }

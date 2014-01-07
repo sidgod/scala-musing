@@ -21,5 +21,10 @@ object workpad {;import org.scalaide.worksheet.runtime.library.WorksheetSupport.
 	val result = {
 		val x = f(3)
 		x * x
-	} + x;System.out.println("""result  : Int = """ + $show(result ))}
+	} + x;System.out.println("""result  : Int = """ + $show(result ));$skip(17); val res$11 = 
+	"abcde".isEmpty;System.out.println("""res11: Boolean = """ + $show(res$11));$skip(14); val res$12 = 
+	"abcde".head;System.out.println("""res12: Char = """ + $show(res$12));$skip(14); val res$13 = 
+	"abcde".tail;System.out.println("""res13: String = """ + $show(res$13));$skip(89); 
+	def sum(f: Int => Int)(a: Int, b: Int): Int = if (a > b) 0 else f(a) + sum(f)(a + 1, b);System.out.println("""sum: (f: Int => Int)(a: Int, b: Int)Int""");$skip(23); val res$14 = 
+	sum(x => x * x)(1, 3);System.out.println("""res14: Int = """ + $show(res$14))}
 }
